@@ -22,9 +22,9 @@
     "sample": "ts-node ./sample/main"
   },
   "peerDependencies": {
-    "@nestjs/common": "^8.0.0",
-    "@nestjs/core": "^8.0.0",
-    "@nestjs/swagger": "^5.0.0",
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/core": "^9.0.0",
+    "@nestjs/swagger": "^6.0.0",
     "reflect-metadata": "^0.1.12"
   },
   "dependencies": {
