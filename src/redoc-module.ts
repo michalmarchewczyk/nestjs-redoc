@@ -103,7 +103,7 @@ export class RedocModule {
     const renderData = {
       data: {
         title,
-        docUrl,
+        docUrl: `./${options.docName}.json`,
         favicon,
         redocVersion,
         options: otherOptions,
