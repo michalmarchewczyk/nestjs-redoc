@@ -125,6 +125,11 @@ export class RedocModule {
     const redocHTML = await hbs.render(redocFilePath, renderData);
     // Serve ReDoc Frontend
     httpAdapter.get(finalPath, async (req: Request, res: Response) => {
+      if (!req.url.endsWith('/')) {
+        res.redirect(301, req.url + '/');
+        return;
+      }
+
       const sendPage = () => {
         // Content-Security-Policy: worker-src 'self' blob:
         res.setHeader(
