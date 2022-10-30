@@ -126,7 +126,7 @@ export class RedocModule {
     // Serve ReDoc Frontend
     httpAdapter.get(finalPath, async (req: Request, res: Response) => {
       if (!req.url.endsWith('/')) {
-        res.redirect(301, req.url + '/');
+        res.redirect(301, '.' + req.url + '/');
         return;
       }
 
